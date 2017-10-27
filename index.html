@@ -1,12 +1,32 @@
 <html>
+
 <head>
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="game.css">
+
 </head>
+
 <body>
-	
-	<script src=""></script>
+	<header>
+		<span id="name">--</span>
+		<span id="health">--</span>
+		<span id="hits">--</span>
+		<div id="items">
+			<button onclick="giveShield(inventory)" id="giveShield">Shield</button>
+			<button onclick="giveMaul(inventory)" id="giveMaul">Maul</button>
+			<button onclick="giveArmorPot(inventory)" id="giveArmorPot">Armor Potion</button>
+		</div>
+	</header>
+	<img src="//placehold.it/200x200" alt="">
+
+	<footer>
+		<button onclick="slap()">Slap</button>
+		<button onclick="punch()">Punch</button>
+		<button onclick="kick()">Kick</button>
+	</footer>
+	<script src="game.js"></script>
 </body>
+
 </html>
