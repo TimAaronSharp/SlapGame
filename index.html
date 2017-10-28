@@ -10,23 +10,37 @@
 
 <body>
 	<header>
-		<span id="name">--</span>
-		<span id="health">--</span>
-		<span id="hits">--</span>
+		<span id="playerName">--</span>
+		<span id="playerHealth">--</span>
+		<span id="playerHits">--</span>
+		<span id="enemyName">--</span>
+		<span id="enemyHealth">--</span>
+		<span id="enemyHits">--</span>
+
 		<div id="items">
-			<button onclick="giveShield(inventory)" id="giveShield">Shield</button>
-			<button onclick="giveMaul(inventory)" id="giveMaul">Maul</button>
-			<button onclick="giveArmorPot(inventory)" id="giveArmorPot">Armor Potion</button>
+			<button onclick="giveItems(inventory.shield, player)" id="giveShield">Shield</button>
+			<button onclick="giveItems(inventory.maul, player)" id="giveMaul">Maul</button>
+			<button onclick="giveItems(inventory.armorPot, player)" id="giveArmorPot">Armor Potion</button>
+			<button onclick="giveItems(inventory.shield, enemy)" id="giveShieldEnemy">Shield</button>
+			<button onclick="giveItems(inventory.maul, enemy)" id="giveMaulEnemy">Maul</button>
+			<button onclick="giveItems(inventory.armorPot, enemy)" id="giveArmorPotEnemy">Armor Potion</button>
 		</div>
+		
 	</header>
+	<img src="//placehold.it/200x200" alt="">
 	<img src="//placehold.it/200x200" alt="">
 
 	<footer>
-		<button onclick="slap()">Slap</button>
-		<button onclick="punch()">Punch</button>
-		<button onclick="kick()">Kick</button>
+		<button onclick="slapPlayer()">Slap</button>
+		<button onclick="punchPlayer()">Punch</button>
+		<button onclick="kickPlayer()">Kick</button>
+		<button onclick="slapEnemy()">Slap</button>
+		<button onclick="punchEnemy()">Punch</button>
+		<button onclick="kickEnemy()">Kick</button>
 	</footer>
+
 	<script src="game.js"></script>
+
 </body>
 
 </html>
