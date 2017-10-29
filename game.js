@@ -107,9 +107,7 @@ function startButton(){
     document.getElementById("start").style.display = "none"
     // document.getElementById("glory").style.zIndex = -1
     // document.getElementById("lassy").style.zIndex = -1
-    document.getElementById("glory").style.position = "relative"
-    document.getElementById("glory").style.left = 30
-    document.getElementById("lassy").style.position = "relative"
+    document.getElementById("glory").style.right = -100
     //document.getElementById("lassy").style.right = 2000
     document.getElementById("lassy").style.left = 800
 }

@@ -11,21 +11,12 @@
   position: relative;
 }
 
-.max-w {
-  max-width: 100%;
-}
-
-.enemy-panel {
-  justify-content: right;
-}
-
 /*-------------------------------*/
 /*--------IMAGES--------*/
 .lass {
   position: relative;
-  right: 2000px;
   left: -2000px;
-  transition: left 3s linear;
+  transition: left 4s linear;
 }
 
 .enemy-img {
@@ -34,7 +25,8 @@
 
 .glorious {
   position: relative;
-  left: 20rem;
+  right: -2800px;
+  transition: right 4s linear;
 }
 
 .player-img {
