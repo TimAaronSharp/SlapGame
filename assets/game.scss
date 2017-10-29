@@ -1,0 +1,65 @@
+/*--------FORMATTING--------*/
+.il{
+    display:inline;
+}
+.ilb{
+    display: inline-block;
+}
+.pos-r{
+    position: relative;
+}
+.max-w{
+    max-width: 100%;
+}
+.enemy-panel{
+    justify-content: right;
+}
+/*-------------------------------*/
+
+/*--------IMAGES--------*/
+.lass{
+    position: relative;
+    // right:200rem;
+    left:80rem;
+}
+.enemy-img{
+    width:20rem;
+}
+.glorious{
+    position: relative;
+    left: 20rem;
+}
+.player-img{
+    width:20rem;
+}
+/*-----------------------------*/
+
+/*-------------TESTING------------*/
+.outline{
+    outline: 1px solid red;
+}
+.outline-b{
+    outline: 1px solid blue;
+}
+/*-----------------------------*/
+
+/*----------STRUCTURE----------*/
+body{
+   background:lightgray;
+   min-height: 100%vh;
+}
+.everything{
+    height:100%;
+    width:75%;
+    margin:auto;
+    background: white;
+    overflow: hidden;
+}
+.foot{
+    position: relative;
+    vertical-align: bottom;
+}
+/*---------ANIMATION--------*/
+.start{
+    z-index: -1;
+}

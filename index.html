@@ -1,46 +1,66 @@
 <html>
 
+
 <head>
 	<title>Slap Object Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
-	<link rel="stylesheet" href="game.css">
+	<link rel="stylesheet" href="assets/game.css">
 
 </head>
 
-<body>
-	<header>
-		<span id="playerName">--</span>
-		<span id="playerHealth">--</span>
-		<span id="playerHits">--</span>
-		<span id="enemyName">--</span>
-		<span id="enemyHealth">--</span>
-		<span id="enemyHits">--</span>
+<body class="outline">
+	<div id+"every" class="everything outline">
+		<!-- <header> REMEMBER TO UNCOMMENT update() IN JS!!!!!!!!
+			<span id="playerName" class="outline"></span>
+			<span id="playerHealth" class="outline"></span>
+			<span id="playerHits" class="outline"></span>
+			<span id="enemyName" class="outline"></span>
+			<span id="enemyHealth" class="outline"></span>
+			<span id="enemyHits" class="outline"></span>
 
-		<div id="items">
-			<button onclick="giveItems(inventory.shield, player)" id="giveShield">Shield</button>
-			<button onclick="giveItems(inventory.maul, player)" id="giveMaul">Maul</button>
-			<button onclick="giveItems(inventory.armorPot, player)" id="giveArmorPot">Armor Potion</button>
-			<button onclick="giveItems(inventory.shield, enemy)" id="giveShieldEnemy">Shield</button>
-			<button onclick="giveItems(inventory.maul, enemy)" id="giveMaulEnemy">Maul</button>
-			<button onclick="giveItems(inventory.armorPot, enemy)" id="giveArmorPotEnemy">Armor Potion</button>
+		</header> -->
+		<div class="lass ilb" id="lassy">
+			<img src="assets/trainer-lass.png" alt="" class="enemy-img">
 		</div>
-		
-	</header>
-	<img src="//placehold.it/200x200" alt="">
-	<img src="//placehold.it/200x200" alt="">
+		<div>
+			<button type="button" onclick="startButton()" id="start">Hi thar</button>
+		</div>
+		<div class="glorious ilb" id="glory">
+			<img src="assets/glorious2.png" alt="" class="player-img">
+		</div>
 
-	<footer>
-		<button onclick="slapPlayer()">Slap</button>
-		<button onclick="punchPlayer()">Punch</button>
-		<button onclick="kickPlayer()">Kick</button>
-		<button onclick="slapEnemy()">Slap</button>
-		<button onclick="punchEnemy()">Punch</button>
-		<button onclick="kickEnemy()">Kick</button>
-	</footer>
-
+		<!-- <footer class="foot">
+			<button onclick="slapPlayer()" class="outline">Slap</button>
+			<button onclick="punchPlayer()" class="outline">Punch</button>
+			<button onclick="kickPlayer()" class="outline">Kick</button>
+			<button onclick="slapEnemy()" class="outline">Slap</button>
+			<button onclick="punchEnemy()" class="outline">Punch</button>
+			<button onclick="kickEnemy()" class="outline">Kick</button>
+		</footer> -->
+	</div>
 	<script src="game.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+<!-- </div>
+		</div> -->
+<!-- <div class="row outline">
+			<div id="items">
+				<div class="col-md-6 outline">
+					<button onclick="giveItems(inventory.shield, player)" id="giveShield" class="outline">Shield</button>
+					<button onclick="giveItems(inventory.maul, player)" id="giveMaul" class="outline">Maul</button>
+					<button onclick="giveItems(inventory.armorPot, player)" id="giveArmorPot" class="outline">Armor Potion</button>
+					<button onclick="giveItems(inventory.shield, enemy)" id="giveShieldEnemy" class="outline">Shield</button>
+					<button onclick="giveItems(inventory.maul, enemy)" id="giveMaulEnemy" class="outline">Maul</button>
+					<button onclick="giveItems(inventory.armorPot, enemy)" id="giveArmorPotEnemy" class="outline">Armor Potion</button>
+				</div>
+
+			</div>
+
+		</div> -->

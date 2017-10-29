@@ -101,6 +101,12 @@ function addModsPlayer() {                        //function to apply item modif
     }
     allModsPlayer = out.toFixed(2)
 }
-update()
+// update()
+
+function startButton(){
+    document.getElementById("start").style.display = "none"
+    // document.getElementById("glory").style.zIndex = -1
+    // document.getElementById("lassy").style.zIndex = -1
+}
 console.log(enemy)
 console.log(player)
