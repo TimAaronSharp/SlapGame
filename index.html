@@ -11,7 +11,7 @@
 
 <body class="outline">
 	<div class="everything outline">
-		<!-- <header> REMEMBER TO UNCOMMENT update() IN JS!!!!!!!!
+		<header>
 			<span id="playerName" class="outline"></span>
 			<span id="playerHealth" class="outline"></span>
 			<span id="playerHits" class="outline"></span>
@@ -19,27 +19,35 @@
 			<span id="enemyHealth" class="outline"></span>
 			<span id="enemyHits" class="outline"></span>
 
-		</header> -->
-		<div class="lass ilb" id="lassy">
+		</header>
+		<div class="lass lass-vanish ilb" id="lassy">
 			<img src="assets/trainer-lass.png" alt="" class="enemy-img">
 		</div>
 
-		<div class="test">			
+		<div class="pressStart">
 			<button type="button" onclick="startButton()" id="start">Start</button>
 		</div>
 
-		<div class="glorious ilb" id="glory">
+		<div class="glorious glorious-vanish ilb" id="glory">
 			<img src="assets/player.png" alt="" class="player-img">
 		</div>
 
-		<!-- <footer class="foot">
+		<div class="message-box ilb" id="fight">
+			<button type="button" onclick="startFight()" id="fight-button">
+				<img src="assets/first-message-box.png" id="first-message" alt="">
+			</button>
+			<button type="button" onclick="throwLassMonster()" id="pre-lass-monster-message">
+				<img src="assets/blank-message-box.png" alt="">
+			</button>
+		</div>
+		<footer class="foot">
 			<button onclick="slapPlayer()" class="outline">Slap</button>
 			<button onclick="punchPlayer()" class="outline">Punch</button>
 			<button onclick="kickPlayer()" class="outline">Kick</button>
 			<button onclick="slapEnemy()" class="outline">Slap</button>
 			<button onclick="punchEnemy()" class="outline">Punch</button>
 			<button onclick="kickEnemy()" class="outline">Kick</button>
-		</footer> -->
+		</footer>
 	</div>
 	<script src="game.js"></script>
 
@@ -48,7 +56,7 @@
 </html>
 
 
-
+<!-- onclick="startFight()" -->
 
 <!-- </div>
 		</div> -->

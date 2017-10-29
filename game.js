@@ -35,19 +35,19 @@ function healthCheckPlayer() {               //function to stop health going bel
 function slapPlayer() {                           //function for the slap attack.
     player.health -= damage * allModsPlayer
     player.hits++
-    healthCheckEnemy()
+    healthCheckPlayer()
     update()
 }
 function punchPlayer() {                          //function for punch attack.
     player.health -= (damage * 5) * allModsPlayer
     player.hits++
-    healthCheckEnemy()
+    healthCheckPlayer()
     update()
 }
 function kickPlayer() {                           //function for kick attack.
     player.health -= (damage * 10) * allModsPlayer
     player.hits++
-    healthCheckEnemy()
+    healthCheckPlayer()
     update()
 }
 function slapEnemy() {                           //function for the slap attack.
@@ -101,15 +101,22 @@ function addModsPlayer() {                        //function to apply item modif
     }
     allModsPlayer = out.toFixed(2)
 }
-// update()
+//update()
 
 function startButton(){
     document.getElementById("start").style.display = "none"
-    // document.getElementById("glory").style.zIndex = -1
-    // document.getElementById("lassy").style.zIndex = -1
+    document.getElementById("fight").style.zIndex = 0
+    document.getElementById("fight-button").style.zIndex= 1
     document.getElementById("glory").style.right = -100
-    //document.getElementById("lassy").style.right = 2000
     document.getElementById("lassy").style.left = 800
+}
+function startFight(){
+    document.getElementById("lassy").style.left = 2800
+    document.getElementById("fight-button").style.display = "none"
+    document.getElementById("pre-lass-monster-message").style.display = "inline"
+}
+function throwLassMonster(){
+    document.getElementById("glory").style.right = 1900
 }
 console.log(enemy)
 console.log(player)

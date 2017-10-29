@@ -11,16 +11,41 @@
   position: relative;
 }
 
+button {
+  border: 0 solid white;
+  padding: 0;
+}
+
+#fight {
+  margin: 0;
+}
+
 /*-------------------------------*/
 /*--------IMAGES--------*/
+#lass {
+  z-index: 0;
+}
+
 .lass {
   position: relative;
   left: -2000px;
   transition: left 4s linear;
 }
 
+.lass-vanish {
+  z-index: 0;
+}
+
+#pre-lass-monster-message {
+  display: none;
+}
+
 .enemy-img {
   width: 20rem;
+}
+
+#glory {
+  z-index: 0;
 }
 
 .glorious {
@@ -29,8 +54,29 @@
   transition: right 4s linear;
 }
 
+.glorious-vanish {
+  z-index: 0;
+}
+
 .player-img {
   width: 25rem;
+}
+
+#fight-button {
+  z-index: -50;
+}
+
+.message-box {
+  position: absolute;
+  z-index: -50;
+  left: 510px;
+  top: 350px;
+  transition: z-index 4s linear;
+}
+
+.message-box img {
+  position: absolute;
+  height: 220px;
 }
 
 /*-----------------------------*/
@@ -66,7 +112,6 @@ body {
 /*---------ANIMATION--------*/
 #start {
   font-size: 6rem;
-  z-index: -1;
   margin-left: 45%;
   margin-bottom: 10%;
 }
