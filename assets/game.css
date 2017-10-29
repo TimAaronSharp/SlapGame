@@ -23,7 +23,9 @@
 /*--------IMAGES--------*/
 .lass {
   position: relative;
-  left: 80rem;
+  right: 2000px;
+  left: -2000px;
+  transition: left 3s linear;
 }
 
 .enemy-img {
