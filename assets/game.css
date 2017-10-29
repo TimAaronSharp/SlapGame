@@ -30,7 +30,7 @@
 }
 
 .player-img {
-  width: 20rem;
+  width: 25rem;
 }
 
 /*-----------------------------*/
@@ -64,6 +64,9 @@ body {
 }
 
 /*---------ANIMATION--------*/
-.start {
+#start {
+  font-size: 6rem;
   z-index: -1;
+  margin-left: 45%;
+  margin-bottom: 10%;
 }
