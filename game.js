@@ -110,13 +110,20 @@ function startButton(){
     document.getElementById("glory").style.right = -100
     document.getElementById("lassy").style.left = 800
 }
-function startFight(){
+function throwLassMonster(){
     document.getElementById("lassy").style.left = 2800
     document.getElementById("fight-button").style.display = "none"
-    document.getElementById("pre-lass-monster-message").style.display = "inline"
+    document.getElementById("lass-dudetrio").style.display = "inline"
 }
-function throwLassMonster(){
+function throwPlayerMonster(){
+    document.getElementById("dudes-pic").style.zIndex = 1
     document.getElementById("glory").style.right = 1900
+    document.getElementById("lass-dudetrio").style.display = "none"
+    document.getElementById("you-codemaster").style.display = "inline"
+}
+function fightBegins(){
+    document.getElementById("code-pic").style.zIndex = 1
+    document.getElementById("you-codemaster").style.display = "none"
 }
 console.log(enemy)
 console.log(player)

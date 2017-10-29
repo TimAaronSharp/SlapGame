@@ -23,7 +23,9 @@
 		<div class="lass lass-vanish ilb" id="lassy">
 			<img src="assets/trainer-lass.png" alt="" class="enemy-img">
 		</div>
-
+		<div class="dudes ilb" id="dudes-pic">
+			<img src="assets/dudetrio.gif"  class="enemy-monster-img" alt="">
+		</div>
 		<div class="pressStart">
 			<button type="button" onclick="startButton()" id="start">Start</button>
 		</div>
@@ -32,23 +34,36 @@
 			<img src="assets/player.png" alt="" class="player-img">
 		</div>
 
-		<div class="message-box ilb" id="fight">
-			<button type="button" onclick="startFight()" id="fight-button">
-				<img src="assets/first-message-box.png" id="first-message" alt="">
-			</button>
-			<button type="button" onclick="throwLassMonster()" id="pre-lass-monster-message">
-				<img src="assets/blank-message-box.png" alt="">
-			</button>
+		<div class="codemaster ilb" id="code-pic">
+			<img src="assets/glorious2.png"  class="player-monster-img" alt="">
 		</div>
-		<footer class="foot">
+
+		<div class="message-box ilb" id="fight">
+
+			<button type="button" onclick="throwLassMonster()" id="fight-button">
+				<img src="assets/lass-code-message.png" id="first-message" alt="">
+			</button>
+
+			<button type="button" onclick="throwPlayerMonster()" id="lass-dudetrio">
+				<img src="assets/lass-dudetrio-message.png" alt="">
+			</button>
+
+			<button type="button" onclick="fightBegins()" id="you-codemaster">
+				<img src="assets/you-codemaster-message.png" alt="">
+			</button>
+
+		</div>
+
+		<!-- <footer class="foot ilb">
 			<button onclick="slapPlayer()" class="outline">Slap</button>
 			<button onclick="punchPlayer()" class="outline">Punch</button>
 			<button onclick="kickPlayer()" class="outline">Kick</button>
 			<button onclick="slapEnemy()" class="outline">Slap</button>
 			<button onclick="punchEnemy()" class="outline">Punch</button>
 			<button onclick="kickEnemy()" class="outline">Kick</button>
-		</footer>
+		</footer> -->
 	</div>
+
 	<script src="game.js"></script>
 
 </body>

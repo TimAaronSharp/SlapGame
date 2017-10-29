@@ -16,7 +16,7 @@ button {
   padding: 0;
 }
 
-#fight {
+.fight {
   margin: 0;
 }
 
@@ -30,14 +30,34 @@ button {
   position: relative;
   left: -2000px;
   transition: left 4s linear;
+  filter: grayscale(100%);
 }
 
-.lass-vanish {
-  z-index: 0;
-}
-
-#pre-lass-monster-message {
+#lass-dudetrio {
   display: none;
+}
+
+#you-codemaster {
+  display: none;
+}
+
+.enemy-monster-img {
+  width: 30rem;
+}
+
+#dudes-pic {
+  z-index: -10;
+}
+
+#code-pic {
+  z-index: -10;
+}
+
+.dudes {
+  position: absolute;
+  left: 700px;
+  top: 25px;
+  filter: grayscale(100%);
 }
 
 .enemy-img {
@@ -52,14 +72,22 @@ button {
   position: relative;
   right: -2800px;
   transition: right 4s linear;
+  filter: grayscale(100%);
 }
 
-.glorious-vanish {
-  z-index: 0;
+.codemaster {
+  position: absolute;
+  left: 100px;
+  bottom: 130px;
+  filter: grayscale(100%);
 }
 
 .player-img {
   width: 25rem;
+}
+
+.player-monster-img {
+  width: 20rem;
 }
 
 #fight-button {
@@ -69,7 +97,7 @@ button {
 .message-box {
   position: absolute;
   z-index: -50;
-  left: 510px;
+  left: 330px;
   top: 350px;
   transition: z-index 4s linear;
 }
@@ -92,8 +120,8 @@ button {
 /*-----------------------------*/
 /*----------STRUCTURE----------*/
 body {
-  background: lightgray;
-  min-height: 100%vh;
+  background: white;
+  height: 700px;
 }
 
 .everything {
@@ -102,11 +130,12 @@ body {
   margin: auto;
   background: white;
   overflow: hidden;
+  position: relative;
 }
 
 .foot {
-  position: relative;
-  vertical-align: bottom;
+  position: absolute;
+  left: 800px;
 }
 
 /*---------ANIMATION--------*/
