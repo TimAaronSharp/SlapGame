@@ -23,6 +23,43 @@ button{
 /*-------------------------------*/
 
 /*--------IMAGES--------*/
+#heads{
+    position: absolute;
+    left:-1940px;
+    top:50px;
+    z-index: 10;
+    filter: grayscale(100%);
+    transition: left 4s linear;
+}
+
+#heads img{
+    width:60px;
+}
+#shoety{
+    position: absolute;
+    left:395px;
+    top:10px;
+    display: none;
+
+}
+#shoety img{
+    height:200px;
+}
+#officeHead{
+    position: absolute;
+    left:385px;
+    top:10px;
+    filter: grayscale(100%);
+    display: none;
+    z-index: 10;
+}
+#short-message{
+    display:none;
+    position: absolute;
+}
+.officeman img{
+    width:100px;
+}
 #lass{
     z-index: 0;
 }
@@ -113,11 +150,13 @@ button{
     position: absolute;
     left: 75px;
     bottom: 425px;
+    display:none;
 }
 #enemyMonsterName{
     position: absolute;
     left:680px;
     bottom:330px;
+    display:none;
 }
 .names{
     z-index: 1;

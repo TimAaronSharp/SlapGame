@@ -132,8 +132,10 @@ function startButton() {
     document.getElementById("fight-button").style.zIndex = 1
     document.getElementById("glory").style.right = -100
     document.getElementById("lassy").style.left = 800
+    document.getElementById("heads").style.left = 860
 }
 function throwLassMonster() {
+    document.getElementById("heads").style.left = 2860
     document.getElementById("lassy").style.left = 2800
     document.getElementById("fight-button").style.display = "none"
     document.getElementById("lass-dudetrio").style.display = "inline"
@@ -156,6 +158,11 @@ function fightBegins() {
     document.getElementById("givepullEnemy").style.display = "inline"
     document.getElementById("itemSpot").style.display = "inline"
     document.getElementById("moveSpot").style.display = "inline"
+    document.getElementById("yourName").style.display = "inline"
+    document.getElementById("enemyMonsterName").style.display = "inline"
+    document.getElementById("shoety").style.display = "inline"
+    document.getElementById("officeHead").style.display = "inline"
+    document.getElementById("short-message").style.display = "inline"
 }
 
 function enemyAttack() {
