@@ -12,19 +12,19 @@
 <body class="outline">
 	<div class="everything outline">
 		<header>
-			<span id="playerName" class="outline"></span>
-			<span id="playerHealth" class="outline"></span>
-			<span id="playerHits" class="outline"></span>
-			<span id="enemyName" class="outline"></span>
-			<span id="enemyHealth" class="outline"></span>
-			<span id="enemyHits" class="outline"></span>
+			<span id="playerName" class="font-change"></span>
+			<span id="playerHealth" class="font-change"></span>
+			<span id="playerHits" class="font-change"></span>
+			<span id="enemyName" class="font-change"></span>
+			<span id="enemyHealth" class="font-change"></span>
+			<span id="enemyHits" class="font-change"></span>
 
 		</header>
 		<div class="lass lass-vanish ilb" id="lassy">
 			<img src="assets/trainer-lass.png" alt="" class="enemy-img">
 		</div>
 		<div class="dudes ilb" id="dudes-pic">
-			<img src="assets/dudetrio.gif"  class="enemy-monster-img" alt="">
+			<img src="assets/dudetrio.gif" class="enemy-monster-img" alt="">
 		</div>
 		<div class="pressStart">
 			<button type="button" onclick="startButton()" id="start">Start</button>
@@ -35,11 +35,33 @@
 		</div>
 
 		<div class="codemaster ilb" id="code-pic">
-			<img src="assets/glorious2.png"  class="player-monster-img" alt="">
+			<img src="assets/glorious2.png" class="player-monster-img" alt="">
 		</div>
+		<button onclick="slapEnemy()" class="choices ilb" id="declare">
+			<img src="assets/declare-variable-attack.png" alt="">
+		</button>
+		<button onclick="punchEnemy()" class="choices ilb" id="invoke">
+			<img src="assets/invoke-function-attack.png" alt="">
+		</button>
+		<button onclick="kickEnemy()" class="choices ilb" id="chain">
+			<img src="assets/method-chain-attack.png" alt="">
+		</button>
+		<button onclick="giveItems(inventory.badCode, enemy)" id="givebadCode" class="choices">
+			<img src="assets/find-bad-code-attack.png" alt="">
+		</button>
+		<button onclick="giveItems(inventory.push, player)" id="givepushEnemy" class="choices">
+			<img src="assets/github-push-item.png" alt=""> </button>
+
+		<button onclick="heal(player)" id="givepullEnemy" class="choices">
+			<img src="assets/pull-working-build-item.png" alt="">
+		</button>
+		<img src="assets/codemaster-name.png" class="names choices" id="yourName" alt="">
+		<img src="assets/dudetrio-name.png" class="names choices" id="enemyMonsterName" alt="">
+		<img src="assets/items.png" class="choices" id="itemSpot" alt="">
+		<img src="assets/moves.png" class="choices" id="moveSpot" alt="">
 
 		<div class="message-box ilb" id="fight">
-
+			<img src="assets/blank-message-box.png" id="empty-box" alt="">
 			<button type="button" onclick="throwLassMonster()" id="fight-button">
 				<img src="assets/lass-code-message.png" id="first-message" alt="">
 			</button>
@@ -52,16 +74,32 @@
 				<img src="assets/you-codemaster-message.png" alt="">
 			</button>
 
+			<!-- <button onclick="punchEnemy()" class="outline">Punch</button>
+			<button onclick="kickEnemy()" class="outline">Kick</button> -->
 		</div>
 
-		<!-- <footer class="foot ilb">
+		<!-- <button onclick="giveItems(inventory.push, player)" id="givepush" class="outline">push</button>
+		
+		<button onclick="giveItems(inventory.pull, player)" id="givepull" class="outline">Armor Potion</button> -->
+		<!-- <button onclick="giveItems(inventory.push, enemy)" id="givepushEnemy" class="outline">push</button>
+		<button onclick="giveItems(inventory.bad-code, enemy)" id="givebadcodeEnemy" class="outline">bad-code</button>
+		<button onclick="giveItems(inventory.pull, enemy)" id="givepullEnemy" class="outline">Armor Potion</button> -->
+
+
+
+
+
+
+
+
+		<footer class="foot ilb">
 			<button onclick="slapPlayer()" class="outline">Slap</button>
 			<button onclick="punchPlayer()" class="outline">Punch</button>
 			<button onclick="kickPlayer()" class="outline">Kick</button>
-			<button onclick="slapEnemy()" class="outline">Slap</button>
-			<button onclick="punchEnemy()" class="outline">Punch</button>
-			<button onclick="kickEnemy()" class="outline">Kick</button>
-		</footer> -->
+			<button onclick="giveItems(inventory.push, enemy)" id="givepushPlayer" class="outline">push</button>
+			<button onclick="giveItems(inventory.badCode, player)" id="givebadcodePlayer" class="outline">Bad Code</button>
+			<button onclick="heal(enemy)" class="outline" ></button>
+		</footer>
 	</div>
 
 	<script src="game.js"></script>
@@ -78,12 +116,12 @@
 <!-- <div class="row outline">
 			<div id="items">
 				<div class="col-md-6 outline">
-					<button onclick="giveItems(inventory.shield, player)" id="giveShield" class="outline">Shield</button>
-					<button onclick="giveItems(inventory.maul, player)" id="giveMaul" class="outline">Maul</button>
-					<button onclick="giveItems(inventory.armorPot, player)" id="giveArmorPot" class="outline">Armor Potion</button>
-					<button onclick="giveItems(inventory.shield, enemy)" id="giveShieldEnemy" class="outline">Shield</button>
-					<button onclick="giveItems(inventory.maul, enemy)" id="giveMaulEnemy" class="outline">Maul</button>
-					<button onclick="giveItems(inventory.armorPot, enemy)" id="giveArmorPotEnemy" class="outline">Armor Potion</button>
+					<button onclick="giveItems(inventory.push, player)" id="givepush" class="outline">push</button>
+					<button onclick="giveItems(inventory.bad-code, player)" id="givebad-code" class="outline">bad-code</button>
+					<button onclick="giveItems(inventory.pull, player)" id="givepull" class="outline">Armor Potion</button>
+					<button onclick="giveItems(inventory.push, enemy)" id="givepushEnemy" class="outline">push</button>
+					<button onclick="giveItems(inventory.bad-code, enemy)" id="givebad-codeEnemy" class="outline">bad-code</button>
+					<button onclick="giveItems(inventory.pull, enemy)" id="givepullEnemy" class="outline">Armor Potion</button>
 				</div>
 
 			</div>

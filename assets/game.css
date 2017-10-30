@@ -20,6 +20,12 @@ button {
   margin: 0;
 }
 
+.font-change {
+  font-family: courier;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 /*-------------------------------*/
 /*--------IMAGES--------*/
 #lass {
@@ -33,11 +39,83 @@ button {
   filter: grayscale(100%);
 }
 
+#declare {
+  position: absolute;
+  left: 375px;
+  bottom: 255px;
+  display: none;
+  z-index: 10;
+}
+
+#invoke {
+  position: absolute;
+  left: 378px;
+  bottom: 215px;
+  display: none;
+  z-index: 10;
+}
+
+#chain {
+  position: absolute;
+  left: 378px;
+  bottom: 190px;
+  display: none;
+  z-index: 10;
+}
+
+#givebadCode {
+  position: absolute;
+  left: 378px;
+  bottom: 160px;
+  display: none;
+  z-index: 10;
+}
+
+#itemSpot {
+  position: absolute;
+  left: 600px;
+  bottom: 275px;
+  display: none;
+  z-index: 10;
+}
+
+#moveSpot {
+  position: absolute;
+  left: 382px;
+  bottom: 275px;
+  display: none;
+  z-index: 10;
+}
+
+#givepushEnemy {
+  position: absolute;
+  left: 600px;
+  bottom: 255px;
+  display: none;
+  z-index: 10;
+}
+
+#givepullEnemy {
+  position: absolute;
+  left: 605px;
+  bottom: 225px;
+  display: none;
+  z-index: 10;
+}
+
+.choices img {
+  width: 200px;
+}
+
 #lass-dudetrio {
   display: none;
 }
 
 #you-codemaster {
+  display: none;
+}
+
+#empty-box {
   display: none;
 }
 
@@ -51,6 +129,22 @@ button {
 
 #code-pic {
   z-index: -10;
+}
+
+#yourName {
+  position: absolute;
+  left: 75px;
+  bottom: 425px;
+}
+
+#enemyMonsterName {
+  position: absolute;
+  left: 680px;
+  bottom: 330px;
+}
+
+.names {
+  z-index: 1;
 }
 
 .dudes {
@@ -136,6 +230,7 @@ body {
 .foot {
   position: absolute;
   left: 800px;
+  z-index: 16;
 }
 
 /*---------ANIMATION--------*/
@@ -143,4 +238,40 @@ body {
   font-size: 6rem;
   margin-left: 45%;
   margin-bottom: 10%;
+}
+
+#playerName {
+  position: absolute;
+  left: 300px;
+  bottom: 390px;
+}
+
+#playerHealth {
+  position: absolute;
+  left: 300px;
+  bottom: 360px;
+}
+
+#playerHits {
+  position: absolute;
+  left: 300px;
+  bottom: 330px;
+}
+
+#enemyName {
+  position: absolute;
+  right: 360px;
+  bottom: 440px;
+}
+
+#enemyHealth {
+  position: absolute;
+  right: 360px;
+  bottom: 410px;
+}
+
+#enemyHits {
+  position: absolute;
+  right: 360px;
+  bottom: 380px;
 }
