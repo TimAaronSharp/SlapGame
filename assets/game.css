@@ -229,7 +229,8 @@ body {
 
 .foot {
   position: absolute;
-  left: 800px;
+  left: 500px;
+  top: 100px;
   z-index: 16;
 }
 
@@ -242,20 +243,21 @@ body {
 
 #playerName {
   position: absolute;
-  left: 300px;
+  left: 298px;
   bottom: 390px;
 }
 
 #playerHealth {
   position: absolute;
-  left: 300px;
+  left: 298px;
   bottom: 360px;
 }
 
 #playerHits {
   position: absolute;
-  left: 300px;
+  left: 298px;
   bottom: 330px;
+  z-index: 10;
 }
 
 #enemyName {
