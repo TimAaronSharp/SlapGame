@@ -11,78 +11,86 @@
 
 <body>
 	<div class="everything">
-		<header>
-
-		</header>
-		<span id="playerName" class="font-change"></span>
-		<span id="playerHealth" class="font-change"></span>
-		<span id="playerHits" class="font-change"></span>
-		<span id="enemyName" class="font-change"></span>
-		<span id="enemyHealth" class="font-change"></span>
-		<span id="enemyHits" class="font-change"></span>
-		<div class="shorts ilb" id="shoety">
+		<span class="playerName font-change"></span>
+		<span class="playerHealth font-change"></span>
+		<span class="playerHits font-change"></span>
+		<span class="enemyName font-change"></span>
+		<span class="enemyHealth font-change"></span>
+		<span class="enemyHits font-change"></span>
+		<div class="shorts shoety">
 			<img src="assets/shorts2.png" alt="">
 		</div>
-		<div class="officeman" id="officeHead">
+		<div class="officeman officehead">
 			<img src="assets/zach-head2.png" alt="">
 		</div>
-		<div id="short-message">
+		<div class="short-message">
 			<img src="assets/shorts-talk.png" alt="">
 		</div>
-		<div class="the-head ilb" id="heads">
+		<div class="the-head heads">
 			<img src="assets/jake-head2.png" alt="">
 		</div>
-		<div class="lass lass-vanish ilb" id="lassy">
+		<div class="lass lassy">
 			<img src="assets/trainer-lass.png" alt="" class="enemy-img">
 		</div>
-		<div class="dudes ilb" id="dudes-pic">
+		<div class="dudes dudes-pic">
 			<img src="assets/dudetrio-abomination.png" class="enemy-monster-img" alt="">
 		</div>
-		<div class="pressStart">
-			<button type="button" onclick="startButton()" id="start">Start</button>
+		<div class="pressStart start">
+
+			<button type="button" onclick="startButton()">Start</button>
 		</div>
 
-		<div class="glorious glorious-vanish ilb" id="glory">
+		<div class="glorious glory">
+
 			<img src="assets/player.png" alt="" class="player-img">
 		</div>
 
-		<div class="codemaster ilb" id="code-pic">
+		<div class="codemaster code-pic">
+
 			<img src="assets/glorious2.png" class="player-monster-img" alt="">
 		</div>
-		<button onclick="slapEnemy()" class="choices ilb" id="declare">
+
+		<button onclick="attack(enemy, 'declare')" class="choices declare">
+
 			<img src="assets/declare-variable-attack.png" alt="">
 		</button>
-		<button onclick="punchEnemy()" class="choices ilb" id="invoke">
+		
+		<button onclick="attack(enemy, 'invoke')" class="choices invoke">
+
 			<img src="assets/invoke-function-attack.png" alt="">
 		</button>
-		<button onclick="kickEnemy()" class="choices ilb" id="chain">
+
+		<button onclick="attack(enemy, 'chain')" class="choices chain">
+
 			<img src="assets/method-chain-attack.png" alt="">
 		</button>
-		<button onclick="giveItems(inventory.badCode, enemy), enemyAttack()" id="givebadCode" class="choices">
+
+		<button onclick="giveItems(inventory.badCode, enemyAttack(), player)"  class="choices givebadCode">
 			<img src="assets/find-bad-code-attack.png" alt="">
 		</button>
-		<button onclick="giveItems(inventory.push, player), enemyAttack()" id="givepushEnemy" class="choices">
+		
+		<button onclick="giveItems(inventory.push, enemyAttack(), player)"  class="choices givepushEnemy">
 			<img src="assets/github-push-item.png" alt=""> </button>
 
-		<button onclick="heal(player)" id="givepullEnemy" class="choices">
+		<button onclick="heal(player)" class="choices givepullEnemy">
 			<img src="assets/pull-working-build-item.png" alt="">
 		</button>
-		<img src="assets/codemaster-name.png" class="names choices" id="yourName" alt="">
-		<img src="assets/dudetrio-name.png" class="names choices" id="enemyMonsterName" alt="">
-		<img src="assets/items.png" class="choices" id="itemSpot" alt="">
-		<img src="assets/moves.png" class="choices" id="moveSpot" alt="">
+		<img src="assets/codemaster-name.png" class="names choices yourName" alt="">
+		<img src="assets/dudetrio-name.png" class="names choices enemyMonsterName" alt="">
+		<img src="assets/items.png" class="choices itemSpot" alt="">
+		<img src="assets/moves.png" class="choices moveSpot" alt="">
 
-		<div class="message-box ilb" id="fight">
-			<img src="assets/blank-message-box.png" id="empty-box" alt="">
-			<button type="button" onclick="throwLassMonster()" id="fight-button">
-				<img src="assets/lass-code-message.png" id="first-message" alt="">
+		<div class="message-box fight">
+			<img src="assets/blank-message-box.png" class="empty-box" alt="">
+			<button type="button" onclick="throwLassMonster()" class="fight-button">
+				<img src="assets/lass-code-message.png" class="first-message" alt="">
 			</button>
 
-			<button type="button" onclick="throwPlayerMonster()" id="lass-dudetrio">
+			<button type="button" onclick="throwPlayerMonster()" class="lass-dudetrio">
 				<img src="assets/lass-dudetrio-message.png" alt="">
 			</button>
 
-			<button type="button" onclick="fightBegins()" id="you-codemaster">
+			<button type="button" onclick="fightBegins()" class="you-codemaster">
 				<img src="assets/you-codemaster-message.png" alt="">
 			</button>
 

@@ -1,7 +1,8 @@
 //IF STATEMENT FOR AFTER CHOOSING WHICH TYPE YOU AND THE COMP WILL USE TO DECIDE THE MODIFIER IE. WATER VS FIRE 1.5X?
 var damage = 1
-var allModsEnemy = 1
-var allModsPlayer = 1
+var allMods = 1
+// var allModsEnemy = 1
+// var allModsPlayer = 1
 var enemy = new Target('Enemy', 150)
 var player = new Target('You', 100)
 
@@ -19,8 +20,8 @@ function Target(name, health) {              //<--Constructor to build enemies.
 }
 var inventory = {                           //Possible item choices.
     push: new Items("Github Push", -0.3, "Push every 5 min!"),//Item objects
-    badCode: new Items("Bad Code", 0.5, "YOU'RE CODE IS CRAP!"),               //made with
-    pull: new Items("Pull Working Build", -0.4, "Good thing you made a backup!")     //a constructor.
+    badCode: new Items("Bad Code", 0.5, "YOU'RE CODE IS CRAP!"),    
+    pull: new Items("Pull Working Build", -0.4, "Good thing you made a backup!")     //made with a constructor.
 }
 function healthCheckEnemy() {               //function to stop health going below 0.
     if (enemy.health > 150) {
@@ -38,49 +39,20 @@ function healthCheckPlayer() {               //function to stop health going bel
         player.health = 0
     }
 }
-function slapPlayer() {                           //function for the slap attack.
-    player.health -= damage * allModsPlayer
-    player.hits++
-    healthCheckPlayer()
-    healthCheckEnemy()
-    update()
-}
-function punchPlayer() {                          //function for punch attack.
-    player.health -= (damage * 5) * allModsPlayer
-    player.hits++
-    healthCheckPlayer()
-    healthCheckEnemy()
-    update()
-}
-function kickPlayer() {                           //function for kick attack.
-    player.health -= (damage * 10) * allModsPlayer
-    player.hits++
-    healthCheckPlayer()
-    healthCheckEnemy()
-    update()
-}
-function slapEnemy() {                           //function for the slap attack.
-    enemy.health -= damage * allModsEnemy
-    enemy.hits++
-    healthCheckPlayer()
-    healthCheckEnemy()
+function attack(target, type){
+    if(type == 'declare'){
+        target.health -= damage * allMods
+        target.hits++
+    }else if(type == 'invoke'){
+        target.health -= (damage * 5) * allMods
+        target.hits++
+    }else if(type == 'chain'){
+        target.health -= (damage * 10) * allMods
+        target.hits++
+    }
     enemyAttack()
-    update()
-}
-function punchEnemy() {                          //function for punch attack.
-    enemy.health -= (damage * 5) * allModsEnemy
-    enemy.hits++
     healthCheckPlayer()
     healthCheckEnemy()
-    enemyAttack()
-    update()
-}
-function kickEnemy() {                           //function for kick attack.
-    enemy.health -= (damage * 10) * allModsEnemy
-    enemy.hits++
-    healthCheckPlayer()
-    healthCheckEnemy()
-    enemyAttack()
     update()
 }
 function heal(target) {
@@ -90,14 +62,48 @@ function heal(target) {
     enemyAttack()
     update()
 }
-function update() {                         //function that updates info on page.
-    document.getElementById('enemyName').innerText = enemy.name
-    document.getElementById('enemyHealth').innerText = enemy.health.toFixed(2)
-    document.getElementById('enemyHits').innerText = enemy.hits
+// function slapPlayer() {                           //function for the slap attack.
+    
+// }
+// function punchPlayer() {                          //function for punch attack.
+    
+// }
+// function kickPlayer() {                           //function for kick attack.
+    
+// }
+// function slapEnemy() {                           //function for the slap attack.
+//     enemy.health -= damage * allModsEnemy
+//     enemy.hits++
+//     healthCheckPlayer()
+//     healthCheckEnemy()
+//     enemyAttack()
+//     update()
+// }
+// function punchEnemy() {                          //function for punch attack.
+//     enemy.health -= (damage * 5) * allModsEnemy
+//     enemy.hits++
+//     healthCheckPlayer()
+//     healthCheckEnemy()
+//     enemyAttack()
+//     update()
+// }
+// function kickEnemy() {                           //function for kick attack.
+//     enemy.health -= (damage * 10) * allModsEnemy
+//     enemy.hits++
+//     healthCheckPlayer()
+//     healthCheckEnemy()
+//     enemyAttack()
+//     update()
+// }
 
-    document.getElementById('playerName').innerText = player.name
-    document.getElementById('playerHealth').innerText = player.health.toFixed(2)
-    document.getElementById('playerHits').innerText = player.hits
+function update() {                         //function that updates info on page.
+    document.getElementsByClassName('enemyName')[0].innerText = enemy.name
+    document.getElementsByClassName('enemyHealth')[0].innerText = enemy.health.toFixed(2)
+    document.getElementsByClassName('enemyHits')[0].innerText = enemy.hits
+
+    document.getElementsByClassName('playerName')[0].innerText = player.name
+    document.getElementsByClassName('playerHealth')[0].innerText = player.health.toFixed(2)
+    document.getElementsByClassName('playerHits')[0].innerText = player.hits
 }
 function giveItems(item, target) {
     for (var i = 0; i < target.equipment.length; i++) {
@@ -106,65 +112,71 @@ function giveItems(item, target) {
             return
     }
     target.equipment.push(item)
-    addModsEnemy()
-    addModsPlayer()
+    addMods(target)
 }
-function addModsEnemy() {            //function to apply item modifiers.
+function addMods(target){
     var out = 1
-    for (var i = 0; i < enemy.equipment.length; i++) {
-        out += enemy.equipment[i].modifier
+    for (var i = 0; i < target.equipment.length; i++) {
+        out += target.equipment[i].modifier
+        allMods = out.toFixed(2);
     }
-    allModsEnemy = out.toFixed(2)
+    return allMods
 }
-function addModsPlayer() {                        //function to apply item modifiers.
-    var out = 1
-    for (var i = 0; i < player.equipment.length; i++) {
+// function addModsEnemy() {            //function to apply item modifiers.
+//     var out = 1
+//     for (var i = 0; i < enemy.equipment.length; i++) {
+//         out += enemy.equipment[i].modifier
+//     }
+//     allModsEnemy = out.toFixed(2)
+// }
+// function addModsPlayer() {                        //function to apply item modifiers.
+//     var out = 1
+//     for (var i = 0; i < player.equipment.length; i++) {
 
-        out += player.equipment[i].modifier
-    }
-    allModsPlayer = out.toFixed(2)
-}
+//         out += player.equipment[i].modifier
+//     }
+//     allModsPlayer = out.toFixed(2)
+// }
 //update()
 
 function startButton() {
-    document.getElementById("start").style.display = "none"
-    document.getElementById("fight").style.zIndex = 0
-    document.getElementById("fight-button").style.zIndex = 1
-    document.getElementById("glory").style.right = -100
-    document.getElementById("lassy").style.left = 800
-    document.getElementById("heads").style.left = 860
+    document.getElementsByClassName("start")[0].style.display = "none"
+    document.getElementsByClassName("fight")[0].style.zIndex = 0
+    document.getElementsByClassName("fight-button")[0].style.zIndex = 1
+    document.getElementsByClassName("glory")[0].style.right = -100
+    document.getElementsByClassName("lassy")[0].style.left = 800
+    document.getElementsByClassName("heads")[0].style.left = 860
 }
 function throwLassMonster() {
-    document.getElementById("heads").style.left = 2860
-    document.getElementById("lassy").style.left = 2800
-    document.getElementById("fight-button").style.display = "none"
-    document.getElementById("lass-dudetrio").style.display = "inline"
+    document.getElementsByClassName("heads")[0].style.left = 2860
+    document.getElementsByClassName("lassy")[0].style.left = 2800
+    document.getElementsByClassName("fight-button")[0].style.display = "none"
+    document.getElementsByClassName("lass-dudetrio")[0].style.display = "inline"
 }
 function throwPlayerMonster() {
-    document.getElementById("dudes-pic").style.zIndex = 2
-    document.getElementById("glory").style.right = 1900
-    document.getElementById("lass-dudetrio").style.display = "none"
-    document.getElementById("you-codemaster").style.display = "inline"
+    document.getElementsByClassName("dudes-pic")[0].style.zIndex = 2
+    document.getElementsByClassName("glory")[0].style.right = 1900
+    document.getElementsByClassName("lass-dudetrio")[0].style.display = "none"
+    document.getElementsByClassName("you-codemaster")[0].style.display = "inline"
 }
 function fightBegins() {
-    document.getElementById("code-pic").style.zIndex = 1
-    document.getElementById("you-codemaster").style.display = "none"
-    document.getElementById("empty-box").style.display = "inline"
-    document.getElementById("declare").style.display = "inline"
-    document.getElementById("invoke").style.display = "inline"
-    document.getElementById("chain").style.display = "inline"
-    document.getElementById("givebadCode").style.display = "inline"
-    document.getElementById("givepushEnemy").style.display = "inline"
-    document.getElementById("givepullEnemy").style.display = "inline"
-    document.getElementById("itemSpot").style.display = "inline"
-    document.getElementById("moveSpot").style.display = "inline"
-    document.getElementById("yourName").style.display = "inline"
-    document.getElementById("enemyMonsterName").style.display = "inline"
-    document.getElementById("shoety").style.display = "inline"
-    document.getElementById("officeHead").style.display = "inline"
-    document.getElementById("short-message").style.display = "inline"
+    document.getElementsByClassName("code-pic")[0].style.zIndex = 1
+    document.getElementsByClassName("you-codemaster")[0].style.display = "none"
+    document.getElementsByClassName("empty-box")[0].style.display = "inline"
+    document.getElementsByClassName("declare")[0].style.display = "inline"
+    document.getElementsByClassName("invoke")[0].style.display = "inline"
+    document.getElementsByClassName("chain")[0].style.display = "inline"
+    document.getElementsByClassName("givebadCode")[0].style.display = "inline"
+    document.getElementsByClassName("givepushEnemy")[0].style.display = "inline"
+    document.getElementsByClassName("givepullEnemy")[0].style.display = "inline"
+    document.getElementsByClassName("itemSpot")[0].style.display = "inline"
+    document.getElementsByClassName("moveSpot")[0].style.display = "inline"
+    document.getElementsByClassName("yourName")[0].style.display = "inline"
+    document.getElementsByClassName("enemyMonsterName")[0].style.display = "inline"
+    document.getElementsByClassName("shoety")[0].style.display = "inline"
+    document.getElementsByClassName("officeHead")[0].style.display = "inline"
+    document.getElementsByClassName("short-message")[0].style.display = "inline"
 }
-
 function enemyAttack() {
     var firstChoice = Math.floor(Math.random() * 10)
     if (firstChoice < 4) {
@@ -179,14 +191,17 @@ function enemyAttack() {
     } else {
         var attackChoice = Math.floor(Math.random() * 10)
         if (attackChoice < 3) {
-            slapPlayer()
+            player.health -= damage * allMods
+            player.hits++
+            //slapPlayer()
         } else if (attackChoice > 2 && attackChoice < 6) {
-            punchPlayer()
+            player.health -= (damage * 5) * allMods
+            player.hits++
+            //punchPlayer()
         } else {
-            kickPlayer()
+            player.health -= (damage * 10) * allMods
+            player.hits++
+            //kickPlayer()
         }
     }
-    console.log(enemyAttack)
 }
-console.log(enemy)
-console.log(player)

@@ -23,7 +23,7 @@ button{
 /*-------------------------------*/
 
 /*--------IMAGES--------*/
-#heads{
+.heads{
     position: absolute;
     left:-1940px;
     top:50px;
@@ -32,20 +32,20 @@ button{
     transition: left 4s linear;
 }
 
-#heads img{
+.heads img{
     width:60px;
 }
-#shoety{
+.shoety{
     position: absolute;
     left:395px;
     top:10px;
     display: none;
 
 }
-#shoety img{
+.shoety img{
     height:200px;
 }
-#officeHead{
+.officeHead{
     position: absolute;
     left:385px;
     top:10px;
@@ -53,14 +53,14 @@ button{
     display: none;
     z-index: 10;
 }
-#short-message{
+.short-message{
     display:none;
     position: absolute;
 }
 .officeman img{
     width:100px;
 }
-#lass{
+.lass{
     z-index: 0;
 }
 .lass{
@@ -69,56 +69,56 @@ button{
     transition: left 4s linear;
     filter: grayscale(100%);
 }
-#declare{
+.declare{
     position: absolute;
     left:375px;
     bottom:255px;
     display: none;
     z-index: 10;
 }
-#invoke{
+.invoke{
     position: absolute;
     left:378px;
     bottom:215px;
     display: none;
     z-index: 10;
 }
-#chain{
+.chain{
     position: absolute;
     left:378px;
     bottom:190px;
     display: none;
     z-index: 10;
 }
-#givebadCode{
+.givebadCode{
     position: absolute;
     left:378px;
     bottom:160px;
     display: none;
     z-index: 10;
 }
-#itemSpot{
+.itemSpot{
     position: absolute;
     left:600px;
     bottom:275px;
     display: none;
     z-index: 10;
 }
-#moveSpot{
+.moveSpot{
     position: absolute;
     left:382px;
     bottom:275px;
     display: none;
     z-index: 10;
 }
-#givepushEnemy{
+.givepushEnemy{
     position: absolute;
     left:600px;
     bottom:255px;
     display: none;
     z-index: 10;
 }
-#givepullEnemy{
+.givepullEnemy{
     position: absolute;
     left:605px;
     bottom:225px;
@@ -128,31 +128,31 @@ button{
 .choices img{
     width:200px;
 }
-#lass-dudetrio{
+.lass-dudetrio{
     display: none;
 }
-#you-codemaster{
+.you-codemaster{
     display: none;
 }
-#empty-box{
+.empty-box{
     display: none;
 }
 .enemy-monster-img{
     width:30rem;
 }
-#dudes-pic{
+.dudes-pic{
     z-index: -10;
 }
-#code-pic{
+.code-pic{
     z-index: -10;
 }
-#yourName{
+.yourName{
     position: absolute;
     left: 75px;
     bottom: 425px;
     display:none;
 }
-#enemyMonsterName{
+.enemyMonsterName{
     position: absolute;
     left:680px;
     bottom:330px;
@@ -170,7 +170,7 @@ button{
 .enemy-img{
     width:20rem;
 }
-#glory{
+.glory{
     z-index: 0;
 }
 .glorious{
@@ -192,7 +192,7 @@ button{
 .player-monster-img{
     width:20rem;    
 }
-#fight-button{
+.fight-button{
    z-index: -50;
 }
 .message-box{
@@ -239,38 +239,38 @@ body{
 }
 
 /*---------ANIMATION--------*/
-#start{
+.start{
     font-size: 6rem;
     margin-left:45%;
     margin-bottom:10%;
 }
-#playerName{
+.playerName{
     position: absolute;
     left:298px;
     bottom:390px;
 }
-#playerHealth{
+.playerHealth{
     position: absolute;
     left:298px;
     bottom:360px;
 }
-#playerHits{
+.playerHits{
     position: absolute;
     left:298px;
     bottom:330px;
     z-index: 10;
 }
-#enemyName{
+.enemyName{
     position: absolute;
     right:360px;
     bottom:440px;
 }
-#enemyHealth{
+.enemyHealth{
     position: absolute;
     right:360px;
     bottom:410px;
 }
-#enemyHits{
+.enemyHits{
     position: absolute;
     right:360px;
     bottom:380px;
